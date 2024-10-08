@@ -57,7 +57,7 @@
         <form action="{{ route('user.store') }}" method="post" class="form-content space-y-4">
             @csrf
             <div>
-                <label for="nama" class="block text-sm font-medium">Nama</label>
+                <label for="nama" class="block text-sm font-medium">Nama: </label>
                 <input type="text" id="nama" name="nama" value="lugita" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-300 focus:border-pink-300 sm:text-sm">
             </div>
             <div>

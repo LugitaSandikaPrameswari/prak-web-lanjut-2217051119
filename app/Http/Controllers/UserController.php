@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\Kelas;
 use Illuminate\Http\Request;
-use App\Models\Kelas;
 
 class UserController extends Controller
 {

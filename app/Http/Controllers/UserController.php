@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Kelas;
 
 class UserController extends Controller
 {
     public function create(){
-        return view('create_user');
-
+        return view('create_user', [
+            'select' => Kelas::all(),
+        ]);
         
     }
     public function store(Request $request) {

@@ -62,7 +62,11 @@
             </div>
             <div>
                 <label for="kelas" class="block text-sm font-medium">Kelas</label>
-                <input type="text" id="kelas" name="kelas" value="D" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-300 focus:border-pink-300 sm:text-sm">
+                <select name="kelas_id" id="kelas_id">
+                    @foreach($kelas as $kelasItem)
+                        <option value="{{ $kelasItem->id }}">{{ $kelasItem->nama_kelas }}</option>
+                    @endforeach
+                </select>
             </div>
             <div>
                 <label for="npm" class="block text-sm font-medium">NPM</label>

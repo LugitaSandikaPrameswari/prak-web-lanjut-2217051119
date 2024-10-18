@@ -54,7 +54,7 @@
     <div class="form-container">
         <img src="/img/BUNGA.png" alt="Bouquet Image" class="flower-img"> <!-- Gambar yang ditambahkan -->
         <h1 class="text-2xl font-bold text-center mb-6">Create User</h1>
-        <form action="{{ route('user.store') }}" method="post" class="form-content space-y-4">
+        <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data" class="form-content space-y-4">
             @csrf
             <div>
                 <label for="nama" class="block text-sm font-medium">Nama</label>
@@ -62,7 +62,7 @@
             </div>
             <div>
                 <label for="kelas" class="block text-sm font-medium">Kelas</label>
-                <select name="kelas_id" id="kelas_id">
+                <select name="kelas_id" id="kelas_id" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-300 focus:border-pink-300 sm:text-sm">
                     @foreach($kelas as $kelasItem)
                         <option value="{{ $kelasItem->id }}">{{ $kelasItem->nama_kelas }}</option>
                     @endforeach
@@ -71,6 +71,10 @@
             <div>
                 <label for="npm" class="block text-sm font-medium">NPM</label>
                 <input type="text" id="npm" name="npm" value="2217051119" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-300 focus:border-pink-300 sm:text-sm">
+            </div>
+            <div>
+                <label for="foto" class="block text-sm font-medium">Foto:</label>
+                <input type="file" id="foto" name="foto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-300 focus:border-pink-300 sm:text-sm">
             </div>
             <div>
                 <input type="submit" value="Submit" class="w-full bg-pink-400 text-white py-2 rounded-md hover:bg-pink-500 cursor-pointer">

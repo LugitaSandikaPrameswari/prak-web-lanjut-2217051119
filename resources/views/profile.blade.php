@@ -73,9 +73,10 @@
                 <img src="/img/howl.jpeg" alt="Profile Picture">
             </div>
             <div class="info">
-            <div class="label">Nama: {{ $nama }}</div>
-                <div class="label">Npm: {{ $npm }}</div>
-                <div class="label">Kelas: {{ $kelas }}</div>
+
+            <div class="label">Nama: {{ $user->nama }}</div>
+                <div class="label">Npm: {{ $user->npm }}</div>
+                <div class="label">Kelas: {{ $user->nama_kelas?? 'Kelas tidak ditemukan'}}</div>
             </div>
         </div>
     </div>

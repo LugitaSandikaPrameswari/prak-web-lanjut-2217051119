@@ -16,7 +16,7 @@
     }
 
     th {
-        background-color: #D2B48C; /* Warna biru muda */
+        background-color: #FFEFD5; /* Warna biru muda */
         color: #333; /* Warna teks header */
     }
 
